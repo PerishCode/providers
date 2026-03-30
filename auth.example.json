@@ -1,0 +1,9 @@
+{
+  "openai": {
+    "type": "oauth",
+    "refresh": "replace-me",
+    "access": "replace-me",
+    "expires": 0,
+    "accountId": "replace-me"
+  }
+}

@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "crates/provider-codex-auth",
+  "crates/provider-server",
+]
+resolver = "2"
