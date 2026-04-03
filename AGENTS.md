@@ -20,6 +20,9 @@ Do not publish real `auth.json`; keep local secrets in `auth.json` and use `auth
 - `crates/provider-openai-auth/src/{models,services}`: OpenAI auth models + AuthService
 - `crates/provider-openai-compatible/src/{config,models,service}.rs`: OpenAI-compatible service contract and upstream forwarding
 - `docs/`: architecture and cleanup notes
+- `scripts/verify.sh`: workspace verify entrypoint; runs no-skips, fmt check, and locked workspace tests
+- `scripts/package.sh`: release packaging entrypoint for a target triple; writes archives to `dist/`
+- `scripts/verify/no-skips.sh`: fast guard that fails on skipped tests
 - `Dockerfile`: builds provider-api binary
 
 ## Common Commands (from `santi-link/`)
@@ -83,3 +86,9 @@ Useful env vars:
 ## FAQ
 
 Legacy provider source moved into `santi-link/`.
+
+## Release Policy
+
+- This workspace follows a long-lived beta-only `0.1.0-beta.N` release line.
+- Keep packaging and verification entrypoints aligned with that beta-only workflow.
+- Skipped tests are not allowed in committed sources; `scripts/verify/no-skips.sh` is part of the required verification gate.
