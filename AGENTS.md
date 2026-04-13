@@ -10,7 +10,7 @@ Do not publish real `auth.json`; keep local secrets in `auth.json` and use `auth
 
 ## Start Here
 
-- `../AGENTS.md`: repo-root product and deployment boundary
+- `../../AGENTS.md`: repo-root product and deployment boundary
 - `docs/architecture.md`: current thin-proxy shape and boundaries
 
 ## Directory Rules
